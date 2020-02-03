@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kafka-producer
+  name: kafka-producer-deployment
   labels:
     app: kafka-producer
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kafka-producer
+      app: kafka-producer-etc
   template:
     metadata:
       labels:
-        app: kafka-producer
+        app: kafka-producer-etc
     spec:
       containers:
       - name: producer
